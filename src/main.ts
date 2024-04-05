@@ -1,7 +1,7 @@
-import { Logger } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { dataSource } from "../config/dataSource";
 import { AppModule } from "./app.module";
+import { PublicHiringTestLogger } from "./common/publicHiringTestLogger";
 
 async function bootstrap() {
   if (!dataSource.isInitialized) {
@@ -13,5 +13,8 @@ async function bootstrap() {
   });
   await app.listen(3000);
 }
-Logger.log(`Server running on http://localhost:3000`, "Bootstrap");
+PublicHiringTestLogger.log(
+  `Server running on http://localhost:3000`,
+  "Bootstrap"
+);
 bootstrap();

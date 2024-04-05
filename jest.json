@@ -1,5 +1,5 @@
 {
-  "coveragePathIgnorePatterns": ["seed-*"],
+  "coveragePathIgnorePatterns": ["seed-*", "publicHiringTestLogger.ts"],
   "moduleFileExtensions": ["js", "json", "ts"],
   "rootDir": "./src",
   "testEnvironment": "node",

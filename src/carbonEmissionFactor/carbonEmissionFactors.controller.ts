@@ -10,21 +10,21 @@ export class CarbonEmissionFactorsController {
   ) {}
 
   @Get()
-  getCarbonEmissionFactors(): Promise<CarbonEmissionFactor[]> {
+  async getCarbonEmissionFactors(): Promise<CarbonEmissionFactor[]> {
     Logger.log(
       `[carbon-emission-factors] [GET] CarbonEmissionFactor: getting all CarbonEmissionFactors`
     );
-    return this.carbonEmissionFactorService.findAll();
+    return await this.carbonEmissionFactorService.findAll();
   }
 
   @Post()
-  createCarbonEmissionFactors(
+  async createCarbonEmissionFactors(
     @Body() carbonEmissionFactors: CreateCarbonEmissionFactorDto[]
   ): Promise<CarbonEmissionFactor[] | null> {
     ``;
     Logger.log(
       `[carbon-emission-factors] [POST] CarbonEmissionFactor: ${carbonEmissionFactors} created`
     );
-    return this.carbonEmissionFactorService.save(carbonEmissionFactors);
+    return await this.carbonEmissionFactorService.save(carbonEmissionFactors);
   }
 }
