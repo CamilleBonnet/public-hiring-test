@@ -14,7 +14,7 @@ beforeAll(async () => {
 beforeEach(async () => {
   await GreenlyDataSource.cleanDatabase();
 });
-describe("FoodProductEntity", () => {
+describe("CarbonEmissionFactor", () => {
   describe("constructor", () => {
     it("should create an emission factor", () => {
       expect(chickenEmissionFactor.name).toBe("chicken");
